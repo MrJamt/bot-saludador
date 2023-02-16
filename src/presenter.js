@@ -1,15 +1,16 @@
-import sumar from "./sumador";
+import f_genero from "./f_genero";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const nombre = document.querySelector("#nombre");
+const genero = document.querySelector("#genero");
+const form = document.querySelector("#saludador-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  
+  
+  //div.innerHTML = "Hola "+ ini.toString() + " " + nombre.value;
+  div.innerHTML = "Hola "+ f_genero(genero) + " " + nombre.value;
+  //div.innerHTML = ini.length;
 });
+
