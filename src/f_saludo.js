@@ -1,18 +1,39 @@
-function f_saludo(genero,edad) {
+function f_saludo(genero,edad,idioma) {
   let ini = " ";
-  if(genero.value == "Mujer")
+  if(idioma.value == "ES")
   {
-    if(edad.value > 30)
-    { ini = "Sra. "}
-    else { ini = "Estimada " }
-  }
-  else
-  {
-    if (genero.value == "Hombre")
+    if(genero.value == "Mujer")
     {
       if(edad.value > 30)
-      { ini = "Sr. "}
-      else { ini = "Estimado " }
+      { ini = "sra. "}
+      else { ini = "estimada " }
+    }
+    else
+    {
+      if (genero.value == "Hombre")
+      {
+        if(edad.value > 30)
+        { ini = "sr. "}
+        else { ini = "estimado " }
+      }
+    }
+  }
+  else  if(idioma.value == "EN")
+  {
+    if(genero.value == "Mujer")
+    {
+      if(edad.value > 30)
+      { ini = "mrs. "}
+      else { ini = "dear " }
+    }
+    else
+    {
+      if (genero.value == "Hombre")
+      {
+        if(edad.value > 30)
+        { ini = "mr. "}
+        else { ini = "dear " }
+      }
     }
   }
   return ini;
